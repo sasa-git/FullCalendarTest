@@ -5,7 +5,7 @@ json.array!(@events) do |event|
 
   json.start event.start_date
 
-  # json.end event.start_date + Rational(1, 24)
+  json.end event.end_date
   # ↑今だけ。jsで終了時刻なしのイベントの表示設定が可能
 
   json.url event_url(event, format: :html)
